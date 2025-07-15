@@ -1,0 +1,25 @@
+class myInfoPage{
+    selectorsList(){
+
+        const selectors = {
+        firstNameField: "[name='firstName']",
+        lastNameField: "[name='lastName']",
+        genericField: ".oxd-input--active",
+        date: "[placeholder='yyyy-dd-mm']",
+        middleName: "[placeholder='Middle Name']",
+        dateCloseButton: ".--close",
+        selectButton: ".oxd-select-text--after",
+        genericCombobox:"[tabindex='0']",
+        saveButton: "[type='submit']"
+                  
+        }
+        return selectors
+    }
+
+ 
+    checkMyInfoPage(){
+        cy.location('pathname').should('equal','/web/index.php/pim/viewPersonalDetails/empNumber/7')
+    }
+
+}
+export default myInfoPage
